@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import CoreData
+import Firebase
 
 @main
 struct Firebase_ProjectApp: App {
@@ -13,7 +15,7 @@ struct Firebase_ProjectApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StarterScreen()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
