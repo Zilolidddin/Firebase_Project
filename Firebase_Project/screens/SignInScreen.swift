@@ -17,7 +17,7 @@ struct SignInScreen: View {
     
     func doSignIn() {
         isLoading = true
-        SessionStore().signIn(email: email, password: password, handler: {(ress, err) in
+        SessionStore().signIn(withEmail: email, password: password, completion: {(ress, err) in
             isLoading = false
             if err != nil {
                 print("Check email or password")
